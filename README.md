@@ -4,11 +4,10 @@ Calendar app made using JavaScript, HTML and CSS. Events are stored to a MongoDB
 This app uses Node.js and it has been tested with the version 16.18.0.
 
 # Getting Started
-You will need to use command 'npm init' in the main folder you want to initiate the calendar app to.
+After having the files on your computer,
+you will have to run the command 'npm install' in the application's root folder which will install the all the required dependencies.
 
-You will also need to install all the required Node.js packages using command 'npm install {PACKAGE_NAME}'.
-
-Required packages are:
+Those dependencies are:
 1. express
 2. mongoose
 3. body-parser
