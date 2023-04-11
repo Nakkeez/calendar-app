@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendar</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <!-- The timepicker used is made by jonataswalker https://github.com/jonataswalker/timepicker.js -->
+  <script src="https://cdn.jsdelivr.net/timepicker.js/latest/timepicker.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/timepicker.js/latest/timepicker.min.css" rel="stylesheet"/>
+  <script src="https://kit.fontawesome.com/4b166f5cf0.js" crossorigin="anonymous"></script>
+</head>
+<body onload="loadEvents()">
+    <div id="container">
+
+      <!-- Header starts -->
+      <div id="header">
+        <div id="monthDisplay"></div>
+
+        <div>
+          <button id="backButton"><i class="fas fa-arrow-left"></i></button>
+          <button id="nextButton"><i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+      <!-- Header ends -->
+
+      <!-- Calendar starts -->
+      <div id="weekdays">
+        <div>Monday</div>
+        <div>Tuesday</div>
+        <div>Wednesday</div>
+        <div>Thursday</div>
+        <div>Friday</div>
+        <div>Saturday</div>
+        <div>Sunday</div>
+      </div>
+
+      <div id="calendar"></div>
+      <!-- Calendar ends -->
+    </div>
+
+    <!-- Forms starts -->
+    <div id="newEventForm">
+      <h2>New Event</h2>
+      <input id="eventInput" placeholder="Event Title" />
+      <input id="courseInput" placeholder="Course Title" />
+      <input type="text" id="time1" placeholder="Time" readonly />
+      
+      <button id="saveButton">Save</button>
+      <button id="cancelButton">Close</button>
+    </div>
+
+    <div id="deleteEventForm">
+      <h2>Events</h2>
+
+      <ul id="eventText"></ul>
+
+      <input id="newEventInput" placeholder="Event Title" />
+      <input id="newCourseInput" placeholder="Course Title" />
+      <input type="text" id="time2" placeholder="Time" readonly />
+
+      <button id="newButton">Add New</button>
+      <button id="markButton">Mark</button>
+      <button id="deleteButton">Delete</button>
+      <button id="closeButton">Close</button>
+
+    </div>
+
+    <div id="eventBackDrop"></div>
+    <!-- Forms ends -->
+  
+  <!-- Timeline starts -->
+  <div id="timelineContainer">
+    <h2>Upcoming Events</h2>
+    <div id="timeline"></div>
+  </div>
+  <!-- Timeline ends -->
+
+  <!-- Scripts -->
+  <script src="code.js"></script>
+</body>
+</html>

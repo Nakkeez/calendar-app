@@ -4,7 +4,7 @@
   "description": "Calendar app made using JavaScript, HTML and CSS. Events are being saved to a MongoDB database.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "keywords": [
     "calendar",
