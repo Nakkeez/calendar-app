@@ -17,6 +17,18 @@ i.fas {
   font-size: 20px;
 }
 
+.fa-sign-out-alt {
+  text-align: center;
+  color: white;
+  padding: 10px;
+  width: 60px;
+  height: 40px;
+  margin-left: 20px;
+  background-color: rgb(211, 49, 49);
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
 /* Configuration of header */
 #header {
   padding: 10px;
