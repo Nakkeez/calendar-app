@@ -11,20 +11,36 @@ Those dependencies are:
 3. body-parser
 4. cors
 5. dotenv
+6. express-openid-connect
+
+You will need your own MongoDB cluster to make this application work.
+As this application uses Auth0 login with express-openid-connect library, you will also need an Auth0 account and to follow the instructions from here to create Web Application in Auth0 dashboard:
+
+https://github.com/auth0/express-openid-connect
 
 Lastly, you will need to create .env file to the main folder which contains following information:   
-MONGO_URI={YOUR_MONGODB_CONNECTION_STRING}   
-PORT={PORT_NUMBER}
+MONGO_URI=YOUR_MONGODB_CONNECTION_STRING     
+PORT=PORT_NUMBER     
+AUTH_REQUIRED=true      
+AUTH0_LOGOUT=true     
+BASE_URL=https://YOUR_APPLICATION_ROOT_URL         
+CLIENT_ID=YOUR_AUTH0_CLIENT_ID             
+ISSUER_BASE_URL=https://YOUR_AUTH0_DOMAIN           
+SECRET=SOME_LONG_RANDOM_VALUE           
 
 For example:   
 MONGO_URI=mongodb+srv://exampleUser:examplePassword@examplecluster.78example21.mongodb.net/exampleDB?retryWrites=true&w=majority   
-PORT=3000
+PORT=3000    
+AUTH_REQUIRED=true    
+AUTH0_LOGOUT=true      
+BASE_URL=http://localhost:3000
+CLIENT_ID=3Fdkdexampleclientidos884s    
+ISSUER_BASE_URL=https://examplebaseurl.auth0.com
+SECRET=kdkaoexamplesecretstring
 
 You can then run the application with the command: 'npm start'
 
-The calendar app should now be running on port 3000.
-
-You can access it by opening the web browser and navigating to 'http://localhost:3000'.
+The calendar app should now be running on the port you choosed.
 
 # Functionality
 
