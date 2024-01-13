@@ -47,6 +47,7 @@ The calendar app should now be running on the port you choosed and can be access
 The application allows users to perform the following actions:
 
 * Create an account and sign in to the application in order to use it.
+
 ![Sign In Form](./images/login.png "Sign In Form")
 
 * Browse all events on the calendar or upcoming events in the timeline.
