@@ -44,11 +44,24 @@ The calendar app should now be running on the port you choosed and can be access
 
 # Functionality
 
-The app allows users to perform the following actions:
+The application allows users to perform the following actions:
+
+* Create an account and sign in to the application in order to use it.
+![Sign In Form](./images/login.png "Sign In Form")
+
+* Browse all events on the calendar or upcoming events in the timeline.
+* Change currently browsed month by pressing the 'Back' or 'Next' arrow buttons in the upper right corner.
+* Logout from the application using the 'Logout' button in upper right corner.
+
+![Calendar"](./images/calendar.png "Calendar")
 
 * Create a new event by clicking on a day in the calendar and filling out a form.
 * Close the opened form by clicking 'Close' button
+
+![New Event Form](./images/new-event-form.png "New Event Form")
+
 * View all events for the day in a list by clicking on the desired day.
-* Mark events as done or change them back to still not ready again by checking their checkboxes and clicking the 'Mark' button.
+* Mark events as done or not done by checking their checkboxes from the list of events and clicking the 'Mark' button.
 * Delete events by checking their checkboxes on the list of events and clicking the 'Delete' button.
-* Change currently browsed month by pressing the 'Back' or 'Next' arrow buttons in the upper right corner.
+
+![Events Form](./images/add-event-form.png "Events Form")
