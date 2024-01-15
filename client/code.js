@@ -128,10 +128,9 @@ function createEvents(scheduleToday, dayContainer) {
         timelineDiv.innerText = (scheduleToday[x].date + ' - ' + scheduleToday[x].time + ' ' + scheduleToday[x].task)
       }
       // Crossing over events that are marked
-      if (scheduleToday[x].mark == 1) {
-        timelineDiv.style.textDecoration = 'line-through';
+      if (scheduleToday[x].mark == 0) {
+        timeline.appendChild(timelineDiv);
       }
-      timeline.appendChild(timelineDiv);
     }
     else {
       divClass = 'previousEvent';
