@@ -18,7 +18,8 @@ const timeline = document.getElementById('timeline');
 
 
 async function loadEvents() {
-  const response = await fetch('http://localhost:3000/events');
+  const host = window.location.host;
+  const response = await fetch(`http://${host}/events`);
   const schedule = await response.json();
   createCalendar(schedule);
 }
@@ -281,7 +282,8 @@ async function addEvent() {
         'mark': 0
     }}
 
-    const response = await fetch('http://localhost:3000/events', {
+    const host = window.location.host;
+    const response = await fetch(`http://${host}/events`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -293,7 +295,8 @@ async function addEvent() {
 }
 
 async function markEvent() {
-  const currentEvents = await fetch('http://localhost:3000/events');
+  const host = window.location.host;
+  const currentEvents = await fetch(`http://${host}/events`);
   const schedule = await currentEvents.json();
   const markedEvent = findSchedule(schedule, clicked);
 
@@ -316,7 +319,7 @@ async function markEvent() {
               'mark': 1
             }
           }
-          const response = await fetch('http://localhost:3000/events/'+markedEvent[x]._id, {
+          const response = await fetch(`http://${host}/events/` + markedEvent[x]._id, {
             method: 'PUT',
             headers: {
               'Content-Type': 'application/json'
@@ -331,7 +334,8 @@ async function markEvent() {
 }
 
 async function deleteEvent() {
-  const currentEvents = await fetch('http://localhost:3000/events');
+  const host = window.location.host;
+  const currentEvents = await fetch(`http://${host}/events`);
   const schedule = await currentEvents.json();
   // Function will get all the events on the currently clicked day
   const deletedEvent = findSchedule(schedule, clicked);
@@ -339,7 +343,7 @@ async function deleteEvent() {
   for (x in deletedEvent) {
     let checkbox = document.getElementById(deletedEvent[x]._id)
     if (checkbox.checked == true) {
-      const response = await fetch('http://localhost:3000/events/'+deletedEvent[x]._id, {
+      const response = await fetch(`http://${host}/events/` + deletedEvent[x]._id, {
         method: 'DELETE',
   })}};
   closeForm();
