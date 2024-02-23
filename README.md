@@ -4,14 +4,6 @@ This is a simple calendar application that allows users to create, view, edit, a
 # Getting Started
 To install all the required dependencies, run the command 'npm install' in the application's root folder.
 
-Installed dependencies are:
-1. express
-2. mongoose
-3. body-parser
-4. cors
-5. dotenv
-6. express-openid-connect
-
 You will need your own MongoDB cluster to use this application.
 
 As this application uses Auth0 login with express-openid-connect library, you will also need an Auth0 account. Follow the instructions from here to create the Web Application in Auth0 dashboard:
